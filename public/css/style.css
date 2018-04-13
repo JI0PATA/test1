@@ -1,0 +1,150 @@
+.form-group.error input, .form-group.error textarea {
+	border-color: red;
+	color: red;
+}
+
+.form-group.error {
+	color: red;
+}
+
+.form-group.success {
+	color: green;
+}
+
+.form-group.success input, .form-group.success textarea {
+	color: green;
+	border-color: green;
+}
+
+/************* ВСПЛЫВАЮЩАЯ ФОРМА *************/
+#formConfirm {
+	width: 400px;
+	background: #fff;
+	border: 3px solid green;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	animation: showForm .5s forwards;
+}
+
+@keyframes showForm {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+#formConfirm.closeForm {
+	animation: closeForm .5s forwards;
+}
+
+@keyframes closeForm {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+#formConfirm .title {
+	font-size: 25px;
+	color: green;
+	font-weight: bold;
+	text-align: center;
+	margin: 30px;
+}
+
+#formConfirm .buttons {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+#formConfirm .buttons .btn {
+	width: 40%;
+	padding: 10px;
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	transition: background .5s;
+}
+
+#formConfirm .buttons .btn.ok {
+	background: green;
+}
+
+#formConfirm .buttons .btn.ok:hover {
+	background: #00a700;
+}
+
+#formConfirm .buttons .btn.cancel {
+	background: red;
+}
+
+#formConfirm .buttons .btn.cancel:hover {
+	background: #b40000;
+}
+
+/************* /ВСПЛЫВАЮЩАЯ ФОРМА ************/
+
+.row.list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row.list > div {
+	margin-bottom: 30px;
+}
+
+.row.list > div > .thumbnail {
+	height: 100%;
+	margin-bottom: 0;
+}
+
+.navbar-header > * {
+	display: flex;
+	align-items: center;
+}
+
+/************* ФОРМА ПОИСКА *************/
+.search-form {
+	margin-bottom: 0;
+	margin-top: 7px;
+	position: relative;
+}
+
+.search-form > .tips {
+	min-width: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 10;
+}
+
+.search-form > .tips > a {
+	display: block;
+	background: #f8f8f8;
+	white-space: nowrap;
+	padding: 10px;
+	color: #000;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background .5s;
+	border-bottom: 2px solid #eaeaea;
+}
+
+.search-form > .tips > a:hover {
+	background: #eaeaea;
+}
+
+.tips_highlight {
+	color: red;
+}
+
+/************* /ФОРМА ПОИСКА ************/
